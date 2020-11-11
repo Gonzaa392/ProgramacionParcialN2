@@ -1,29 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Creditos.gd" type="Script" id=1]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends Button
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first tim
-
-func _on_Button_pressed():
-	get_tree().change_scene(\"res://Game.tscn\")
-	pass
-"
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=1]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Label" type="Label" parent="."]
-margin_left = 1.25989
+margin_left = 2.25989
 margin_top = 115.966
-margin_right = 1023.26
+margin_right = 1024.26
 margin_bottom = 473.966
 text = "Menu"
 align = 1
@@ -38,10 +22,11 @@ margin_top = 328.0
 margin_right = 605.978
 margin_bottom = 393.0
 text = "Jugar"
-script = SubResource( 1 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+target_scene = "res://Scenes/Menu/LevelSelection.tscn"
 
 [node name="Creditos" type="Button" parent="."]
 margin_left = 418.0
@@ -53,5 +38,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+target_scene = "res://Scenes/Creditos.tscn"
 [connection signal="pressed" from="Game" to="Game" method="_on_Button_pressed"]
-[connection signal="pressed" from="Creditos" to="Creditos" method="_on_Creditos_pressed"]
+[connection signal="pressed" from="Creditos" to="Creditos" method="_on_Button_pressed"]
