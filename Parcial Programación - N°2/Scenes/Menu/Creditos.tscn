@@ -9,6 +9,7 @@ margin_left = 10.7547
 margin_top = 507.779
 margin_right = 249.755
 margin_bottom = 590.779
+target_scene = "res://Scenes/Menu/Menu.tscn"
 
 [node name="Label" type="Label" parent="."]
 margin_left = 418.0

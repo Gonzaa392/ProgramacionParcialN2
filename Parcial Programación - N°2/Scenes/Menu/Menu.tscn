@@ -38,6 +38,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-target_scene = "res://Scenes/Creditos.tscn"
+target_scene = "res://Scenes/Menu/Creditos.tscn"
 [connection signal="pressed" from="Game" to="Game" method="_on_Button_pressed"]
 [connection signal="pressed" from="Creditos" to="Creditos" method="_on_Button_pressed"]
