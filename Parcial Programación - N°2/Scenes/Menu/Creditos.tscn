@@ -1,23 +1,66 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scenes/Buttons/Back.tscn" type="PackedScene" id=1]
+[ext_resource path="res://PNG/Menú Background.jpeg" type="Texture" id=2]
+[ext_resource path="res://PNG/descarga.png" type="Texture" id=3]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/mini_pixel-7.ttf"
 
-[node name="Back" parent="." instance=ExtResource( 1 )]
-margin_left = 10.7547
-margin_top = 507.779
-margin_right = 249.755
-margin_bottom = 590.779
-target_scene = "res://Scenes/Menu/Menu.tscn"
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = SubResource( 1 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = 418.0
-margin_top = 234.0
-margin_right = 471.0
-margin_bottom = 252.0
-rect_scale = Vector2( 2.47872, 3.12452 )
-text = "Créditos"
+[node name="Node2D" type="Control"]
+anchor_right = 1.066
+anchor_bottom = 1.0
+margin_right = -1091.58
+margin_bottom = -600.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 1.86096
+margin_top = 2.17773
+margin_right = 1021.86
+margin_bottom = 602.178
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "
+[center][rainbow][shake rate=1000]Rizzi Luka
+
+Gonzalo Antuna
+
+Lorda Ignacio
+
+Delgado Federico"
+text = "
+Rizzi Luka
+
+Gonzalo Antuna
+
+Lorda Ignacio
+
+Delgado Federico"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Menú Background" type="Sprite" parent="RichTextLabel"]
+show_behind_parent = true
+position = Vector2( 545.146, 414.005 )
+texture = ExtResource( 2 )
+
+[node name="descarga" type="Sprite" parent="RichTextLabel"]
+position = Vector2( 898.866, 528.912 )
+texture = ExtResource( 3 )
+
+[node name="Back" parent="." instance=ExtResource( 1 )]
+margin_left = 22.4084
+margin_top = 501.102
+margin_right = 261.408
+margin_bottom = 584.102
+target_scene = "res://Scenes/Menu/Menu.tscn"
