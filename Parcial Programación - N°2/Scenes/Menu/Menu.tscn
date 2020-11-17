@@ -38,10 +38,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -102.014
-margin_top = -82.6019
-margin_right = 577.986
-margin_bottom = 197.398
+margin_left = -100.0
+margin_top = -80.0
+margin_right = 580.0
+margin_bottom = 200.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 2 )
 script = ExtResource( 3 )
@@ -66,10 +66,10 @@ __meta__ = {
 }
 
 [node name="Creditos" type="TextureButton" parent="."]
-margin_left = -103.158
-margin_top = 15.5898
-margin_right = 576.842
-margin_bottom = 295.59
+margin_left = -100.0
+margin_top = 10.0
+margin_right = 580.0
+margin_bottom = 290.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 2 )
 script = ExtResource( 4 )
@@ -90,11 +90,39 @@ bbcode_enabled = true
 bbcode_text = "[center][shake]CREDITOS"
 text = "CREDITOS"
 
+[node name="Salir" type="TextureButton" parent="."]
+margin_left = -100.0
+margin_top = 100.0
+margin_right = 580.0
+margin_bottom = 380.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 2 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+target_scene = "res://Scenes/Menu/Creditos.tscn"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Salir"]
+margin_left = 84.2788
+margin_top = 90.4455
+margin_right = 184.279
+margin_bottom = 112.445
+rect_scale = Vector2( 5, 5 )
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center][shake]SALIR"
+text = "SALIR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ColorRect" type="ColorRect" parent="."]
 show_behind_parent = true
-margin_left = -508.658
+margin_left = -507.599
 margin_top = -290.228
-margin_right = 521.342
+margin_right = 522.401
 margin_bottom = 319.772
 mouse_filter = 2
 color = Color( 0, 0, 0, 1 )
@@ -103,3 +131,5 @@ __meta__ = {
 }
 [connection signal="pressed" from="Jugar" to="Jugar" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Creditos" to="Creditos" method="_on_Creditos_pressed"]
+[connection signal="pressed" from="Salir" to="Salir" method="_on_Creditos_pressed"]
+[connection signal="pressed" from="Salir" to="Salir" method="_on_Salir_pressed"]
