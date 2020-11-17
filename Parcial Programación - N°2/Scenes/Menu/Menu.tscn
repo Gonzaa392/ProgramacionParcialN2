@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
+[ext_resource path="res://scenes/Menu/Creditos.gd" type="Script" id=1]
 [ext_resource path="res://PNG/Button_Template.png" type="Texture" id=2]
 [ext_resource path="res://Scripts/TextureButton.gd" type="Script" id=3]
-[ext_resource path="res://Scenes/Menu/Creditos.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Menu/Salir.gd" type="Script" id=4]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/mini_pixel-7.ttf"
@@ -72,11 +73,10 @@ margin_right = 580.0
 margin_bottom = 290.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 2 )
-script = ExtResource( 4 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-target_scene = "res://Scenes/Menu/Creditos.tscn"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Creditos"]
 margin_left = 84.2788
@@ -101,7 +101,6 @@ script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-target_scene = "res://Scenes/Menu/Creditos.tscn"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Salir"]
 margin_left = 84.2788
@@ -131,5 +130,4 @@ __meta__ = {
 }
 [connection signal="pressed" from="Jugar" to="Jugar" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Creditos" to="Creditos" method="_on_Creditos_pressed"]
-[connection signal="pressed" from="Salir" to="Salir" method="_on_Creditos_pressed"]
 [connection signal="pressed" from="Salir" to="Salir" method="_on_Salir_pressed"]
