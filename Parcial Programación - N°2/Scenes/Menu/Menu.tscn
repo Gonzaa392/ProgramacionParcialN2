@@ -1,14 +1,31 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Scripts/Button.gd" type="Script" id=1]
+[ext_resource path="res://PNG/Button_Template.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/TextureButton.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Menu/Creditos.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/mini_pixel-7.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://fonts/mini_pixel-7.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = SubResource( 3 )
 
 [node name="Node2D" type="Node2D"]
+position = Vector2( 507.93, 287.177 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 2.25989
-margin_top = 115.966
-margin_right = 1024.26
-margin_bottom = 473.966
+margin_left = -53.3997
+margin_top = -178.38
+margin_right = 46.6003
+margin_bottom = -128.38
 text = "Menu"
 align = 1
 valign = 1
@@ -16,28 +33,73 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Game" type="Button" parent="."]
-margin_left = 417.978
-margin_top = 328.0
-margin_right = 605.978
-margin_bottom = 393.0
-text = "Jugar"
-script = ExtResource( 1 )
+[node name="Jugar" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -102.014
+margin_top = -82.6019
+margin_right = 577.986
+margin_bottom = 197.398
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 2 )
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 target_scene = "res://Scenes/Menu/LevelSelection.tscn"
 
-[node name="Creditos" type="Button" parent="."]
-margin_left = 418.0
-margin_top = 416.0
-margin_right = 606.0
-margin_bottom = 479.0
-text = "Créditos"
-script = ExtResource( 1 )
+[node name="RichTextLabel" type="RichTextLabel" parent="Jugar"]
+margin_left = 76.0471
+margin_top = 93.352
+margin_right = 176.047
+margin_bottom = 115.352
+rect_scale = Vector2( 5, 5 )
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center] [shake]JUGAR"
+text = " JUGAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Creditos" type="TextureButton" parent="."]
+margin_left = -103.158
+margin_top = 15.5898
+margin_right = 576.842
+margin_bottom = 295.59
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 2 )
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 target_scene = "res://Scenes/Menu/Creditos.tscn"
-[connection signal="pressed" from="Game" to="Game" method="_on_Button_pressed"]
-[connection signal="pressed" from="Creditos" to="Creditos" method="_on_Button_pressed"]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Creditos"]
+margin_left = 84.2788
+margin_top = 90.4455
+margin_right = 184.279
+margin_bottom = 112.445
+rect_scale = Vector2( 5, 5 )
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center][shake]CREDITOS"
+text = "CREDITOS"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_left = -508.658
+margin_top = -290.228
+margin_right = 521.342
+margin_bottom = 319.772
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Jugar" to="Jugar" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="Creditos" to="Creditos" method="_on_Creditos_pressed"]

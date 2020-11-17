@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Button.gd" type="Script" id=1]
+[ext_resource path="res://PNG/Button_Template.png" type="Texture" id=2]
+
+[node name="TextureButton" type="TextureButton"]
+margin_left = -68.549
+margin_top = -23.4983
+margin_right = 611.451
+margin_bottom = 256.502
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+target_scene = "res://Scenes/Menu/LevelSelection.tscn"

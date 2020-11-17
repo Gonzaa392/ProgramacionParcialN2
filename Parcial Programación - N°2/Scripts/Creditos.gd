@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 
 
 # Declare member variables here. Examples:
@@ -6,11 +6,9 @@ extends Button
 # var b = "text"
 export(String) var target_scene = ""
 
-# Called when the node enters the scene tree for the first tim
 
-func _on_Button_pressed():
+func _on_TextureButton_pressed():
 	var err = get_tree().change_scene(target_scene)
 	if err != OK:
 		print("Error al cambiar de Escena")
-
-
+		pass

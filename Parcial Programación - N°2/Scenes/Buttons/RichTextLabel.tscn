@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://PNG/descarga.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/mini_pixel-7.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = SubResource( 1 )
+
+[node name="RichTextLabel" type="RichTextLabel"]
+margin_left = 1.86096
+margin_top = 2.17773
+margin_right = 1021.86
+margin_bottom = 602.178
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "
+[center][rainbow][shake rate=1000]Rizzi Luka
+
+Antuna Gonzalo
+
+Lorda Ignacio
+
+Delgado Federico"
+text = "
+Rizzi Luka
+
+Antuna Gonzalo
+
+Lorda Ignacio
+
+Delgado Federico"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+show_behind_parent = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -5.33936
+margin_top = -2.66968
+margin_right = 4.66162
+margin_bottom = 7.33008
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="descarga" type="Sprite" parent="."]
+position = Vector2( 898.866, 528.912 )
+texture = ExtResource( 2 )
