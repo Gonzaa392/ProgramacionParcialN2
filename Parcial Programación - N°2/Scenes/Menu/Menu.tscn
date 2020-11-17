@@ -1,14 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Scripts/Button.gd" type="Script" id=1]
-[ext_resource path="res://PNG/NakfHv4.jpeg" type="Texture" id=2]
 
 [node name="Node2D" type="Node2D"]
-
-[node name="NakfHv4" type="Sprite" parent="."]
-position = Vector2( 512.508, 300.276 )
-scale = Vector2( 0.715008, 0.237097 )
-texture = ExtResource( 2 )
 
 [node name="Label" type="Label" parent="."]
 margin_left = 2.25989
