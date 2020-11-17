@@ -1,0 +1,89 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scenes/platforms/magnet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/car/car.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/platforms/bounce.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/platforms/floor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/platforms/seesaw.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/platforms/goal.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/platforms/zerograv.tscn" type="PackedScene" id=7]
+[ext_resource path="res://images/seamless.png" type="Texture" id=8]
+
+[sub_resource type="PhysicsMaterial" id=1]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="freeshape" type="StaticBody2D" parent="."]
+position = Vector2( 379.438, 434.182 )
+physics_material_override = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="freeshape"]
+polygon = PoolVector2Array( -241.661, -106.497, -246.15, 108.454, 385.796, 117.434, 2302.29, 139.545, 2354.29, -878.455, 1848.29, -964.455, 1818.29, -778.455, 1944.29, -692.455, 1954.29, -496.455, 1876.29, -314.455, 1696.29, -202.455, 1374.29, -130.455, 744.294, -156.455, 430.294, -110.455, 382.99, -40.8332, 321.815, -6.59811, 260.641, 15.2899, 196.1, 21.4634, 136.609, 10.2388, 90.5881, -0.985809, 29.9752, 5.18773, -54.2095, 9.67758, -132.782, 1.25911, -201.252, -58.2314 )
+
+[node name="CollisionPolygon2D2" type="Polygon2D" parent="freeshape"]
+texture = ExtResource( 8 )
+texture_scale = Vector2( 4, 4 )
+polygon = PoolVector2Array( -241.661, -106.497, -246.15, 108.454, 385.796, 117.434, 2302.29, 139.545, 2354.29, -878.455, 1848.29, -964.455, 1818.29, -778.455, 1944.29, -692.455, 1954.29, -496.455, 1876.29, -314.455, 1696.29, -202.455, 1374.29, -130.455, 744.294, -156.455, 430.294, -110.455, 382.99, -40.8332, 321.815, -6.59811, 260.641, 15.2899, 196.1, 21.4634, 136.609, 10.2388, 90.5881, -0.985809, 29.9752, 5.18773, -54.2095, 9.67758, -132.782, 1.25911, -201.252, -58.2314 )
+
+[node name="car" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2081.46, -627.525 )
+
+[node name="bounce" parent="." instance=ExtResource( 3 )]
+position = Vector2( 336.943, 463.873 )
+
+[node name="floor" parent="." instance=ExtResource( 4 )]
+position = Vector2( 0, 356 )
+
+[node name="floor2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -726.535, 429.999 )
+
+[node name="floor3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -2384.7, 420.1 )
+
+[node name="floor4" parent="." instance=ExtResource( 4 )]
+position = Vector2( -3074.84, 346.276 )
+
+[node name="floor5" parent="." instance=ExtResource( 4 )]
+position = Vector2( -3292.84, 286.276 )
+rotation = 0.526807
+
+[node name="floor6" parent="." instance=ExtResource( 4 )]
+position = Vector2( -3815.29, 132.469 )
+rotation = 1.56588
+
+[node name="floor7" parent="." instance=ExtResource( 4 )]
+position = Vector2( -3516.18, 228.978 )
+rotation = -0.00830221
+
+[node name="seesaw" parent="." instance=ExtResource( 5 )]
+position = Vector2( -1098.48, 403.2 )
+
+[node name="seesaw2" parent="." instance=ExtResource( 5 )]
+position = Vector2( -1558.83, 400.025 )
+
+[node name="seesaw3" parent="." instance=ExtResource( 5 )]
+position = Vector2( -2019.17, 400.025 )
+
+[node name="zerograv" parent="." instance=ExtResource( 7 )]
+position = Vector2( -218.633, 356.54 )
+linear_damp = 1.0
+
+[node name="zerograv2" parent="." instance=ExtResource( 7 )]
+position = Vector2( -364.949, 388.494 )
+linear_damp = 1.0
+
+[node name="zerograv3" parent="." instance=ExtResource( 7 )]
+position = Vector2( -506.22, 408.676 )
+linear_damp = 1.0
+
+[node name="magnet" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2877.34, 142.148 )
+
+[node name="magnet2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2734.38, 143.83 )
+
+[node name="magnet3" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2588.07, 147.193 )
+
+[node name="goal" parent="." instance=ExtResource( 6 )]
+position = Vector2( -3712.93, 229.64 )

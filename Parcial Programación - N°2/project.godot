@@ -19,11 +19,6 @@ config/name="Parcial Programación - N° 2"
 run/main_scene="res://Scenes/Menu/Menu.tscn"
 config/icon="res://icon.png"
 
-[display]
-
-window/stretch/mode="viewport"
-window/stretch/aspect="keep"
-
 [rendering]
 
 environment/default_environment="res://default_env.tres"
