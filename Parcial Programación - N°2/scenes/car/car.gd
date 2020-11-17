@@ -3,6 +3,7 @@ extends RigidBody2D
 var can_jump = false
 export var SPEED = 10
 const ROT_IMPULSE = 40000
+const JUMP_IMPULSE = -120000
 
 func _physics_process(delta):
 	if Input.is_action_pressed("ui_right"):
@@ -25,5 +26,5 @@ func _physics_process(delta):
 		self.apply_torque_impulse(ROT_IMPULSE)
 	
 	if Input.is_action_just_pressed("ui_accept") and can_jump:
-		self.apply_central_impulse(Vector2(0,-120000))
+		self.apply_central_impulse(Vector2(0,JUMP_IMPULSE))
 		can_jump = false
