@@ -7,7 +7,7 @@ extends TextureButton
 export(String) var target_scene = ""
 
 
-func _on_TextureButton_pressed():
+func _on_Creditos_pressed():
 	var err = get_tree().change_scene(target_scene)
 	if err != OK:
 		print("Error al cambiar de Escena")

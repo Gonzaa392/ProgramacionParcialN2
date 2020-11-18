@@ -77,6 +77,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+target_scene = "res://Scenes/Menu/Creditos.tscn"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Creditos"]
 margin_left = 84.2788
