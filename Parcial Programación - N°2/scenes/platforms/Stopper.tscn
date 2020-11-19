@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="PhysicsMaterial" id=1]
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 51.2495, 49.4276 )
+
+[node name="Stopper" type="StaticBody2D"]
+position = Vector2( -569.357, 108.627 )
+physics_material_override = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
