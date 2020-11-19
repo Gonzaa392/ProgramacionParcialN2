@@ -4,12 +4,14 @@
 [ext_resource path="res://PNG/Car_Red .png" type="Texture" id=2]
 
 [sub_resource type="PhysicsMaterial" id=1]
+friction = 0.0
 absorbent = true
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 106.792, 8.96565 )
 
 [sub_resource type="PhysicsMaterial" id=3]
+bounce = 1.0
 absorbent = true
 
 [sub_resource type="CircleShape2D" id=4]
@@ -17,12 +19,12 @@ radius = 24.1671
 
 [node name="car" type="RigidBody2D"]
 position = Vector2( 14, -4 )
-mass = 300.0
+mass = 180.0
 physics_material_override = SubResource( 1 )
-gravity_scale = 5.0
+gravity_scale = 4.0
 can_sleep = false
 script = ExtResource( 1 )
-SPEED = 200
+SPEED = 5000
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 3.57481, -0.293911 )
@@ -35,7 +37,7 @@ texture = ExtResource( 2 )
 
 [node name="r_wheel" type="RigidBody2D" parent="."]
 position = Vector2( 70, 35 )
-mass = 5.10204
+mass = 5.1
 physics_material_override = SubResource( 3 )
 __meta__ = {
 "_edit_group_": true
@@ -51,7 +53,7 @@ softness = 0.03
 
 [node name="l_wheel" type="RigidBody2D" parent="."]
 position = Vector2( -64, 35 )
-mass = 5.10204
+mass = 5.1
 physics_material_override = SubResource( 3 )
 __meta__ = {
 "_edit_group_": true

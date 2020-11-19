@@ -1,28 +1,44 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Button.gd" type="Script" id=1]
+[ext_resource path="res://PNG/Button_Template.png" type="Texture" id=2]
 
-[node name="Back" type="Button"]
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://fonts/mini_pixel-7.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = SubResource( 1 )
+
+[node name="Back" type="TextureButton"]
 anchor_left = 0.182
 anchor_top = 0.845
 anchor_right = 0.182
 anchor_bottom = 0.845
-margin_left = -119.5
-margin_top = -41.5556
-margin_right = 119.501
-margin_bottom = 41.4444
+margin_left = -119.368
+margin_top = -42.0
+margin_right = 560.632
+margin_bottom = 238.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 2 )
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 target_scene = "res://Scenes/Menu.tscn"
 
-[node name="Label" type="Label" parent="."]
-margin_left = 92.9209
-margin_top = 31.0678
-margin_right = 183.921
-margin_bottom = 58.0678
-text = "ATRAS"
+[node name="Label" type="RichTextLabel" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.347
+margin_top = -51.0693
+margin_right = -150.347
+margin_bottom = -29.0693
+rect_scale = Vector2( 5, 5 )
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 2 )
+bbcode_enabled = true
+bbcode_text = "[center][shake]BACK"
+text = "BACK"
 __meta__ = {
 "_edit_use_anchors_": false
 }

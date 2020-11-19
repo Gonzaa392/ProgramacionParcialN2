@@ -6,7 +6,7 @@
 extents = Vector2( 67, 33 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 65.5, 100.5 )
+extents = Vector2( 65.5, 79.1948 )
 
 [node name="magnet" type="StaticBody2D"]
 
@@ -26,5 +26,6 @@ gravity_vec = Vector2( 0, -1 )
 gravity = 100.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="attractor"]
-scale = Vector2( 2, 2 )
+position = Vector2( 2.38419e-07, -60.5707 )
+scale = Vector2( 2, 1.9 )
 shape = SubResource( 2 )

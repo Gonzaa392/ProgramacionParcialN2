@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://BackButton.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/BackButton.gd" type="Script" id=1]
 [ext_resource path="res://PNG/Button_Template.png" type="Texture" id=2]
+
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
