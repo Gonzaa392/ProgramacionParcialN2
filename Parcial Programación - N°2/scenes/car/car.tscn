@@ -12,7 +12,6 @@ extents = Vector2( 106.792, 8.96565 )
 
 [sub_resource type="PhysicsMaterial" id=3]
 bounce = 1.0
-absorbent = true
 
 [sub_resource type="CircleShape2D" id=4]
 radius = 24.1671
@@ -24,7 +23,6 @@ physics_material_override = SubResource( 1 )
 gravity_scale = 4.0
 can_sleep = false
 script = ExtResource( 1 )
-SPEED = 5000
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 3.57481, -0.293911 )
