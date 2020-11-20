@@ -6,7 +6,7 @@
 extents = Vector2( 67, 33 )
 
 [node name="zerograv" type="RigidBody2D"]
-mass = 50.0
+mass = 40.0
 gravity_scale = 0.0
 linear_damp = 10.0
 

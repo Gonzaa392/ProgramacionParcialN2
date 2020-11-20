@@ -1,24 +1,150 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/car/car.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/misc/Coin.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/levels/Platforms/Platform.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/levels/Game.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/misc/Camera2D.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/platforms/magnet.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/platforms/zerograv.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/levels/Platforms/Seesaw.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/misc/Death.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/levels/Spikes.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/platforms/bounce.tscn" type="PackedScene" id=11]
 
 [node name="Level 1" type="Node2D"]
 script = ExtResource( 3 )
 
 [node name="car" parent="." instance=ExtResource( 1 )]
+position = Vector2( 21.4307, 109.021 )
+SPEED = 60
 
 [node name="Camera2D" parent="car" instance=ExtResource( 5 )]
 
 [node name="HUD2" parent="car/Camera2D" instance=ExtResource( 4 )]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 564.645, 211.287 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PoolVector2Array( -38.5629, 324.272, 213.549, 340.92, 491.823, 512.166, 1279.08, 623.952, 1528.81, 390.867, 1992.6, 424.165, 2211.42, 547.842, 2775.13, 948.106, 3035.46, 1011.6, 3422.79, 986.204, 4026, 402.04, 4241.89, 630.626, 4660.96, 636.976, 4572.06, 433.788, 5680.66, 576.504, 6156.35, -203.615, 6432.24, -175.074, 6346.62, 947.537, 7231.39, 976.078, 7278.96, 1860.85, -1701.93, 1642.03, -1511.66, 1118.78, -1701.93, 414.772, -1778.04, -336.806, -1549.72, 462.341, -1074.03, 481.368, -693.487, 148.39, -550.782, -117.992, -341.481, -89.4514 )
+[node name="Node2D2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -198.075, -217.317 )
+rotation = -1.5708
+scale = Vector2( 0.68, 1 )
 
-[node name="Coin" parent="." instance=ExtResource( 2 )]
-position = Vector2( 737.455, 328.964 )
+[node name="Node2D12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 20736.9, -124.084 )
+rotation = -1.5708
+scale = Vector2( 0.68, 1 )
+
+[node name="Node2D3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1988.67, 210 )
+
+[node name="Node2D4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3413.36, 35.528 )
+
+[node name="Node2D6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6539.2, 198.405 )
+
+[node name="Seesaw" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4563.56, 13.2728 )
+
+[node name="Seesaw2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5388.64, 132.067 )
+
+[node name="zerograv" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7328.27, 189.422 )
+
+[node name="zerograv2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7600.67, 188.007 )
+
+[node name="Node2D5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8663.21, 197.907 )
+
+[node name="zerograv6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7464.32, 188.941 )
+
+[node name="zerograv4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7738.19, 187.944 )
+
+[node name="zerograv8" parent="." instance=ExtResource( 7 )]
+position = Vector2( 7874.24, 187.944 )
+
+[node name="Node2D7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9327.96, 525.998 )
+rotation = 1.5708
+scale = Vector2( 0.4, 1 )
+
+[node name="Node2D8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9983.28, 861.645 )
+
+[node name="magnet2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 10881.3, 146.215 )
+
+[node name="magnet3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 11295.5, 24.8627 )
+
+[node name="Node2D9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 12334.8, 441.037 )
+
+[node name="Spikes" parent="." instance=ExtResource( 10 )]
+position = Vector2( 7417.15, 323.071 )
+level_scene = "res://Scenes/levels/Level 1.tscn"
+
+[node name="Spikes2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 7594.94, 326.246 )
+level_scene = "res://Scenes/levels/Level 1.tscn"
+
+[node name="Spikes3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 7766.38, 326.246 )
+level_scene = "res://Scenes/levels/Level 1.tscn"
+
+[node name="Spikes4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2826.07, 206.457 )
+level_scene = "res://Scenes/levels/Level 1.tscn"
+
+[node name="Death" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2258.57, 1367.16 )
+level_scene = "res://Scenes/levels/Level 1.tscn"
+
+[node name="Death2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 19815.8, 1367.16 )
+level_scene = "res://Scenes/levels/Level 1.tscn"
+
+[node name="magnet4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 13658.5, -286.331 )
+
+[node name="magnet" parent="." instance=ExtResource( 6 )]
+position = Vector2( 13263.2, -161.807 )
+
+[node name="Node2D11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 15215.6, 216.493 )
+
+[node name="bounce" parent="." instance=ExtResource( 11 )]
+position = Vector2( 16114.8, 287.78 )
+
+[node name="bounce2" parent="." instance=ExtResource( 11 )]
+position = Vector2( 16390.8, 287.78 )
+
+[node name="bounce4" parent="." instance=ExtResource( 11 )]
+position = Vector2( 14031.3, 251.346 )
+
+[node name="bounce5" parent="." instance=ExtResource( 11 )]
+position = Vector2( 14311.9, 251.346 )
+
+[node name="magnet5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 16774.4, -254.443 )
+
+[node name="bounce3" parent="." instance=ExtResource( 11 )]
+position = Vector2( 17847.4, 316.272 )
+
+[node name="bounce6" parent="." instance=ExtResource( 11 )]
+position = Vector2( 18125.8, 316.272 )
+
+[node name="bounce7" parent="." instance=ExtResource( 11 )]
+position = Vector2( 18404.2, 316.272 )
+
+[node name="magnet6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 18832.7, -259.572 )
+
+[node name="Node2D10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 19979.5, 304.063 )

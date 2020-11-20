@@ -14,8 +14,8 @@ extends Camera2D
 # creo. Pueden cambiarlo para cambiar la distancia y velocidad a la que el zoom
 # se va escalando. Cuanto más chico es más rápido se llega al MAX_ZOOM
 
-const MIN_ZOOM = 1
-const MAX_ZOOM = 6
+const MIN_ZOOM = 2
+const MAX_ZOOM = 5
 const zoom_percent = 20 # si quieren jugar con esto es la velocidad a la que
 #cambia el zoom. Haganla más grande si quieren, en lo posible no la bajen mucho
 
