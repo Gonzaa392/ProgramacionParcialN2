@@ -63,10 +63,10 @@ margin_right = 696.277
 margin_bottom = 780.528
 
 [node name="last_time" type="Label" parent="."]
-margin_left = 451.41
-margin_top = 341.637
-margin_right = 531.41
-margin_bottom = 355.637
+margin_left = 448.891
+margin_top = 342.897
+margin_right = 528.891
+margin_bottom = 356.897
 __meta__ = {
 "_edit_use_anchors_": false
 }

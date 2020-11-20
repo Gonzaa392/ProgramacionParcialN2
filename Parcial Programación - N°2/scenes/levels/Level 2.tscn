@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scenes/levels/Platforms/Platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/levels/Platforms/Seesaw.tscn" type="PackedScene" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://Scenes/misc/Camera2D.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/levels/Game.gd" type="Script" id=10]
 [ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=11]
+[ext_resource path="res://PNG/flecha_neon_azul.png" type="Texture" id=12]
+[ext_resource path="res://PNG/flecha_neon.png" type="Texture" id=13]
+[ext_resource path="res://Scenes/misc/Death.tscn" type="PackedScene" id=14]
 
 [node name="Level 2" type="Node2D"]
 position = Vector2( -6150.94, -256.289 )
@@ -89,7 +92,7 @@ position = Vector2( 4830, -50 )
 position = Vector2( 264, 0 )
 
 [node name="car" parent="." instance=ExtResource( 3 )]
-position = Vector2( 15391, -802.178 )
+position = Vector2( 73.2217, -21.8264 )
 SPEED = 50
 
 [node name="Camera2D" parent="car" instance=ExtResource( 9 )]
@@ -147,4 +150,26 @@ position = Vector2( 14605.2, -1114.49 )
 
 [node name="Coin2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 15191.5, -1431.16 )
+
+[node name="flecha_neon" type="Sprite" parent="."]
+position = Vector2( 11800.7, -592.983 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 13 )
+
+[node name="flecha_neon_azul" type="Sprite" parent="."]
+position = Vector2( 13785.1, -816.352 )
+rotation = -1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="flecha_neon_azul2" type="Sprite" parent="."]
+position = Vector2( 4360.34, 125.453 )
+rotation = -1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 12 )
+
+[node name="Death" parent="." instance=ExtResource( 14 )]
+position = Vector2( 8125.91, 2152.08 )
+level_scene = "res://Scenes/levels/Level 2.tscn"
 [connection signal="body_entered" from="goal" to="." method="_on_goal_body_entered"]
