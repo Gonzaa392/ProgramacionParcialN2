@@ -85,10 +85,14 @@ margin_right = 696.277
 margin_bottom = 780.528
 
 [node name="last_time" type="Label" parent="."]
-margin_left = 439.441
-margin_top = 351.557
-margin_right = 639.441
-margin_bottom = 406.557
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 429.701
+margin_top = 393.985
+margin_right = 629.701
+margin_bottom = 448.985
 custom_fonts/font = SubResource( 4 )
 
 [node name="coins" type="Label" parent="."]

@@ -172,6 +172,7 @@ texture = ExtResource( 12 )
 
 [node name="Death" parent="." instance=ExtResource( 14 )]
 position = Vector2( 8125.91, 2152.08 )
+scale = Vector2( 2, 1 )
 level_scene = "res://Scenes/levels/Level 2.tscn"
 
 [node name="Spikes2" parent="." instance=ExtResource( 15 )]
