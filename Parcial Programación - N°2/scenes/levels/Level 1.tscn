@@ -14,10 +14,8 @@ current = true
 zoom = Vector2( 2, 2 )
 
 [node name="Tiempo" type="Label" parent="car/Camera2D"]
-margin_left = 184.452
-margin_top = -258.271
-margin_right = 510.452
-margin_bottom = -86.2712
+margin_right = 326.0
+margin_bottom = 172.0
 align = 1
 valign = 1
 __meta__ = {

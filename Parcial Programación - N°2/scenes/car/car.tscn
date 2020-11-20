@@ -66,13 +66,11 @@ node_b = NodePath("..")
 softness = 0.03
 
 [node name="ray_ceil" type="RayCast2D" parent="."]
-visible = false
 position = Vector2( -100, -16 )
 enabled = true
 cast_to = Vector2( 200, 0 )
 
 [node name="ray_floor" type="RayCast2D" parent="."]
-visible = false
 position = Vector2( -100, 64 )
 enabled = true
 cast_to = Vector2( 200, 0 )
