@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Scenes/levels/Platforms/Platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/levels/Platforms/Seesaw.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scenes/platforms/magnet.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/misc/Coin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/platforms/goal.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/platforms/zerograv.tscn" type="PackedScene" id=8]
 
 [node name="Level 2" type="Node2D"]
 position = Vector2( -6150.94, -256.289 )
@@ -37,19 +38,20 @@ rotation = -0.174533
 [node name="platform9" parent="." instance=ExtResource( 1 )]
 position = Vector2( 15444.1, -509.389 )
 
+[node name="platform10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 16173.5, -1166.9 )
+rotation = 1.5708
+
 [node name="platform4" parent="." instance=ExtResource( 1 )]
 position = Vector2( 10245.8, -88.2035 )
 rotation = -0.174533
-scale = Vector2( 1, 1 )
 
 [node name="platform5" parent="." instance=ExtResource( 1 )]
 position = Vector2( 12009.7, 426.323 )
 rotation = 1.5708
-scale = Vector2( 1, 1 )
 
 [node name="platform6" parent="." instance=ExtResource( 1 )]
 position = Vector2( 11343.5, 1123.65 )
-scale = Vector2( 1, 1 )
 
 [node name="platform7" parent="." instance=ExtResource( 1 )]
 position = Vector2( 6828.94, 948.317 )
@@ -82,9 +84,8 @@ position = Vector2( 4830, -50 )
 position = Vector2( 264, 0 )
 
 [node name="car" parent="." instance=ExtResource( 3 )]
-position = Vector2( 768.626, -127.503 )
-mass = 200.0
-SPEED = 50
+position = Vector2( 77.4199, 34.2102 )
+SPEED = 60
 
 [node name="Camera2D" type="Camera2D" parent="car"]
 current = true
@@ -117,5 +118,14 @@ position = Vector2( 7168.78, 391.94 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="goal" parent="." instance=ExtResource( 7 )]
-position = Vector2( 15980.9, -677.235 )
+position = Vector2( 15968.4, -635.786 )
 scale = Vector2( 2, 2 )
+
+[node name="zerograv" parent="." instance=ExtResource( 8 )]
+position = Vector2( 14199, -740.781 )
+
+[node name="zerograv2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 14605.2, -1114.49 )
+
+[node name="Coin2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 15134.7, -1487.09 )

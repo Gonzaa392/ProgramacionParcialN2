@@ -161,10 +161,10 @@ __meta__ = {
 
 [node name="ColorRect" type="ColorRect" parent="."]
 show_behind_parent = true
-margin_left = -507.599
-margin_top = -290.228
-margin_right = 522.401
-margin_bottom = 319.772
+margin_left = -517.0
+margin_top = -297.0
+margin_right = 526.0
+margin_bottom = 322.0
 mouse_filter = 2
 color = Color( 0, 0, 0, 1 )
 __meta__ = {

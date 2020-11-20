@@ -22,7 +22,10 @@ margin_bottom = 238.0
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 2 )
 script = ExtResource( 1 )
-target_scene = "res://Scenes/Menu.tscn"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+target_scene = "res://Scenes/Menu/Menu.tscn"
 
 [node name="Label" type="RichTextLabel" parent="."]
 anchor_left = 0.5
@@ -42,4 +45,4 @@ text = "BACK"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="." to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="." to="." method="_on_Back_pressed"]
