@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scenes/levels/Platforms/Platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/levels/Platforms/Seesaw.tscn" type="PackedScene" id=2]
@@ -8,11 +8,14 @@
 [ext_resource path="res://Scenes/misc/Coin.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/platforms/goal.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/platforms/zerograv.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/misc/Camera2D.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/levels/Game.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=11]
 
 [node name="Level 2" type="Node2D"]
 position = Vector2( -6150.94, -256.289 )
 script = ExtResource( 10 )
+goal_target_scene = "res://Scenes/Menu/LevelSelection.tscn"
 
 [node name="Seesaw" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1721.54, 157.714 )
@@ -86,22 +89,12 @@ position = Vector2( 4830, -50 )
 position = Vector2( 264, 0 )
 
 [node name="car" parent="." instance=ExtResource( 3 )]
-position = Vector2( -12.1748, 55.8445 )
+position = Vector2( 15391, -802.178 )
 SPEED = 50
 
-[node name="Camera2D" type="Camera2D" parent="car"]
-current = true
-zoom = Vector2( 2, 2 )
+[node name="Camera2D" parent="car" instance=ExtResource( 9 )]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="car/Camera2D"]
-
-[node name="Label" type="Label" parent="car/Camera2D/CanvasLayer"]
-margin_right = 40.0
-margin_bottom = 14.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="HUD2" parent="car/Camera2D" instance=ExtResource( 11 )]
 
 [node name="Seesaw4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 10071.3, 1115.94 )
@@ -144,6 +137,7 @@ scale = Vector2( 0.8, 0.8 )
 [node name="goal" parent="." instance=ExtResource( 7 )]
 position = Vector2( 15968.4, -635.786 )
 scale = Vector2( 2, 2 )
+script = null
 
 [node name="zerograv" parent="." instance=ExtResource( 8 )]
 position = Vector2( 14199, -740.781 )
@@ -153,3 +147,4 @@ position = Vector2( 14605.2, -1114.49 )
 
 [node name="Coin2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 15191.5, -1431.16 )
+[connection signal="body_entered" from="goal" to="." method="_on_goal_body_entered"]
