@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/aceleracion +  salto 2.ogg-f9eca86b7ab4878c05b9f58c71757d92.oggstr"
+
+[deps]
+
+source_file="res://Sonidos/aceleracion +  salto 2.ogg"
+dest_files=[ "res://.import/aceleracion +  salto 2.ogg-f9eca86b7ab4878c05b9f58c71757d92.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
