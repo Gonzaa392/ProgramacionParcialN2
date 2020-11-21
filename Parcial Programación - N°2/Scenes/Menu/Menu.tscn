@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/Menu/Creditos.gd" type="Script" id=1]
 [ext_resource path="res://PNG/Button_Template.png" type="Texture" id=2]
@@ -21,6 +21,13 @@ font_path = "res://fonts/mini_pixel-7.ttf"
 [sub_resource type="DynamicFont" id=4]
 size = 20
 font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://fonts/mini_pixel-7.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = SubResource( 5 )
 
 [node name="Node2D" type="Node2D"]
 position = Vector2( 507.93, 287.177 )
@@ -156,6 +163,19 @@ texture = ExtResource( 5 )
 position = Vector2( 436.226, 243.306 )
 scale = Vector2( 0.15, 0.15 )
 texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = 288.475
+margin_top = -279.493
+margin_right = 508.475
+margin_bottom = -239.493
+custom_fonts/font = SubResource( 6 )
+text = "Presione F11 para pantalla completa"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="Jugar" to="Jugar" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Creditos" to="Creditos" method="_on_Creditos_pressed"]
 [connection signal="pressed" from="Salir" to="Salir" method="_on_Salir_pressed"]
