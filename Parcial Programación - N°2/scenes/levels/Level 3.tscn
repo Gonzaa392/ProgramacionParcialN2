@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Scenes/platforms/bounce.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/levels/Platforms/Platform.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Scenes/platforms/goal.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/Buttons/Exit_Button.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/platforms/Checkpoint.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/levels/Level_background.tscn" type="PackedScene" id=15]
 
 [node name="Main" type="Node2D"]
 position = Vector2( -4195.52, 275.896 )
@@ -192,5 +193,7 @@ position = Vector2( 5354.88, -225.837 )
 
 [node name="Checkpoint" parent="Checkpoint/Checkpoint" instance=ExtResource( 14 )]
 position = Vector2( -10792.2, 329.056 )
+
+[node name="Level_background" parent="." instance=ExtResource( 15 )]
 [connection signal="body_entered" from="goal" to="." method="_on_goal_body_entered"]
 [connection signal="body_entered" from="goal" to="." method="_on_goal3_body_entered"]
