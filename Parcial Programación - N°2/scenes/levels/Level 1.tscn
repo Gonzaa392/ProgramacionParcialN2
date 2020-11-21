@@ -166,15 +166,15 @@ position = Vector2( 17599.9, -26.1796 )
 position = Vector2( 20557.9, 188.491 )
 scale = Vector2( 2, 2 )
 
+[node name="Checkpoint4" parent="." instance=ExtResource( 15 )]
+position = Vector2( 9983.46, 772.105 )
+
+[node name="Checkpoint3" parent="." instance=ExtResource( 15 )]
+position = Vector2( 14604.8, 124.976 )
+
+[node name="Checkpoint2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 6539.39, 113.712 )
+
 [node name="Checkpoint" parent="." instance=ExtResource( 15 )]
 position = Vector2( 4042.92, -48.113 )
-
-[node name="Checkpoint" parent="Checkpoint" instance=ExtResource( 15 )]
-position = Vector2( 2496.47, 161.825 )
-
-[node name="Checkpoint" parent="Checkpoint/Checkpoint" instance=ExtResource( 15 )]
-position = Vector2( 3444.07, 658.393 )
-
-[node name="Checkpoint" parent="Checkpoint/Checkpoint/Checkpoint" instance=ExtResource( 15 )]
-position = Vector2( 4621.38, -647.129 )
 [connection signal="body_entered" from="goal" to="." method="_on_goal2_body_entered"]
