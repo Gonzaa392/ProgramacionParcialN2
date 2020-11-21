@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Scenes/platforms/bounce.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/levels/Platforms/Platform.tscn" type="PackedScene" id=2]
@@ -12,10 +12,12 @@
 [ext_resource path="res://Scenes/levels/Game.gd" type="Script" id=10]
 [ext_resource path="res://Scenes/misc/Death.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/platforms/goal.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/Buttons/Exit_Button.tscn" type="PackedScene" id=13]
 
 [node name="Level 3" type="Node2D"]
 position = Vector2( -4195.52, 275.896 )
 script = ExtResource( 10 )
+goal3_target_scene = "res://Scenes/Menu/LevelSelection.tscn"
 
 [node name="Seesaw" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2475.63, 419.075 )
@@ -156,12 +158,14 @@ position = Vector2( 11742.9, 679.254 )
 position = Vector2( 7342.36, 1452.69 )
 
 [node name="car" parent="." instance=ExtResource( 6 )]
-position = Vector2( -1102.99, 323.047 )
+position = Vector2( -1118.89, 319.18 )
 SPEED = 60
 
 [node name="Camera2D" parent="car" instance=ExtResource( 7 )]
 
 [node name="HUD2" parent="car/Camera2D" instance=ExtResource( 9 )]
+
+[node name="Exit_Button" parent="car/Camera2D/HUD2" instance=ExtResource( 13 )]
 
 [node name="Death" parent="." instance=ExtResource( 11 )]
 position = Vector2( 9462.56, 2629.87 )
@@ -173,8 +177,8 @@ position = Vector2( 6377.28, 1761.22 )
 level_scene = "res://Scenes/levels/Level 3.tscn"
 
 [node name="goal" parent="." instance=ExtResource( 12 )]
-position = Vector2( 14981.2, 1282.22 )
-scale = Vector2( 1.722, 1.242 )
+position = Vector2( 14963.8, 1176.81 )
+scale = Vector2( 2, 2 )
 
 [node name="Node2D12" parent="." instance=ExtResource( 2 )]
 position = Vector2( 13916.2, 879.25 )
@@ -185,3 +189,5 @@ position = Vector2( 14394.1, 879.249 )
 [node name="Node2D14" parent="." instance=ExtResource( 2 )]
 position = Vector2( 15153.5, 633.001 )
 rotation = 1.5708
+[connection signal="body_entered" from="goal" to="." method="_on_goal3_body_entered"]
+[connection signal="body_entered" from="goal" to="." method="_on_goal_body_entered"]
