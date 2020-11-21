@@ -1,0 +1,187 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scenes/platforms/bounce.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/levels/Platforms/Platform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/platforms/magnet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/levels/Platforms/Seesaw.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/misc/Coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/car/car.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/misc/Camera2D.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/levels/Spikes.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Scenes/levels/Game.gd" type="Script" id=10]
+[ext_resource path="res://Scenes/misc/Death.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/platforms/goal.tscn" type="PackedScene" id=12]
+
+[node name="Level 3" type="Node2D"]
+position = Vector2( -4195.52, 275.896 )
+script = ExtResource( 10 )
+
+[node name="Seesaw" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2475.63, 419.075 )
+scale = Vector2( 0.996702, 0.993029 )
+
+[node name="magnet" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3093.99, -187.056 )
+scale = Vector2( 0.996702, 0.993029 )
+
+[node name="Seesaw4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4103.09, 311.3 )
+
+[node name="Node2D3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5264.01, 331.432 )
+
+[node name="Seesaw2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 574.335, 420.562 )
+
+[node name="Seesaw3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1418.83, 480.883 )
+
+[node name="magnet2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3494.67, -220.686 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7062.3, 324.461 )
+
+[node name="Node2D4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5974.55, 1003.28 )
+rotation = 1.5708
+
+[node name="bounce4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 6173.88, 1757.83 )
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( -597.351, 424.187 )
+
+[node name="Node2D5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8479.37, 1775.26 )
+
+[node name="Seesaw5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7346.09, 1586.41 )
+
+[node name="Spikes7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7867.47, 1606.41 )
+scale = Vector2( 4, 4 )
+level_scene = "res://Scenes/levels/Level 3.tscn"
+
+[node name="Spikes2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8072.73, 1676.84 )
+level_scene = "res://Scenes/levels/Level 3.tscn"
+
+[node name="Spikes" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6851.09, 1763.25 )
+level_scene = "res://Scenes/levels/Level 3.tscn"
+
+[node name="magnet3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8867.68, 237.924 )
+rotation = 2.55342
+
+[node name="Seesaw6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8254.16, 327.155 )
+
+[node name="magnet4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 9131.77, 4.31104 )
+rotation = 2.64068
+
+[node name="magnet5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 9436.44, -148.088 )
+rotation = 2.81173
+
+[node name="bounce2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 9870.54, -190.203 )
+
+[node name="Node2D6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 10620.1, 115.885 )
+
+[node name="Node2D7" parent="." instance=ExtResource( 2 )]
+position = Vector2( -1281.37, -233.985 )
+rotation = 1.5708
+
+[node name="Node2D8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9852.77, 1594.63 )
+rotation = -0.26529
+
+[node name="Spikes3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9931.84, -15.4341 )
+level_scene = "res://Scenes/levels/Level 3.tscn"
+
+[node name="Spikes4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10054.6, -12.2167 )
+level_scene = "res://Scenes/levels/Level 3.tscn"
+
+[node name="Spikes5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10173.3, -7.97876 )
+level_scene = "res://Scenes/levels/Level 3.tscn"
+
+[node name="Seesaw7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 11802.8, 114.809 )
+
+[node name="Node2D10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 13255.8, 215.912 )
+rotation = 1.5708
+
+[node name="Seesaw8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 12786.1, 427.269 )
+
+[node name="Node2D11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 14388.2, 1286.07 )
+rotation = -3.14159
+
+[node name="Node2D9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 12990.3, 1285.89 )
+rotation = -3.14159
+
+[node name="magnet6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 11305.2, 1679.08 )
+rotation = -3.14159
+
+[node name="magnet7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 10846.3, 1765.21 )
+rotation = -3.14159
+
+[node name="magnet8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 12023.7, 1578.35 )
+rotation = -3.14159
+
+[node name="bounce3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 11660.8, 1486.34 )
+
+[node name="bounce5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 6615.23, 1657.93 )
+
+[node name="Seesaw9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 11742.9, 679.254 )
+
+[node name="Coin" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7342.36, 1452.69 )
+
+[node name="car" parent="." instance=ExtResource( 6 )]
+position = Vector2( -1102.99, 323.047 )
+SPEED = 60
+
+[node name="Camera2D" parent="car" instance=ExtResource( 7 )]
+
+[node name="HUD2" parent="car/Camera2D" instance=ExtResource( 9 )]
+
+[node name="Death" parent="." instance=ExtResource( 11 )]
+position = Vector2( 9462.56, 2629.87 )
+scale = Vector2( 1.29554, 7.60752 )
+level_scene = "res://Scenes/levels/Level 3.tscn"
+
+[node name="Spikes6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6377.28, 1761.22 )
+level_scene = "res://Scenes/levels/Level 3.tscn"
+
+[node name="goal" parent="." instance=ExtResource( 12 )]
+position = Vector2( 14981.2, 1282.22 )
+scale = Vector2( 1.722, 1.242 )
+
+[node name="Node2D12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 13916.2, 879.25 )
+
+[node name="Node2D13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 14394.1, 879.249 )
+
+[node name="Node2D14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 15153.5, 633.001 )
+rotation = 1.5708
