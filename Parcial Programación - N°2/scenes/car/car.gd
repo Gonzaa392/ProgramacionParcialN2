@@ -1,7 +1,7 @@
 extends RigidBody2D
 
 var can_jump = false
-export var SPEED = 10
+export(int) var SPEED = 10
 const ROT_IMPULSE = 40000
 const JUMP_IMPULSE = -90000
 

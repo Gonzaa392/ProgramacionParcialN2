@@ -40,5 +40,5 @@ func _process(delta):
 		#print(y)
 		target_zoom = clamp(x/y + MIN_ZOOM,MIN_ZOOM,MAX_ZOOM)
 	
-	i = self.zoom.y/zoom_percent*19 + target_zoom/zoom_percent
+	i = self.zoom.y/zoom_percent*(zoom_percent-1) + target_zoom/zoom_percent
 	self.zoom = Vector2(i,i)
