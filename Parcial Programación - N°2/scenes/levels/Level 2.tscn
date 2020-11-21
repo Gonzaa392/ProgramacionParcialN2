@@ -94,7 +94,7 @@ position = Vector2( 4830, -50 )
 position = Vector2( 264, 0 )
 
 [node name="car" parent="." instance=ExtResource( 3 )]
-position = Vector2( 73.2217, -21.8264 )
+position = Vector2( -34.8271, 74.6577 )
 SPEED = 50
 
 [node name="Camera2D" parent="car" instance=ExtResource( 9 )]
@@ -146,7 +146,6 @@ scale = Vector2( 0.8, 0.8 )
 [node name="goal" parent="." instance=ExtResource( 7 )]
 position = Vector2( 15968.4, -635.786 )
 scale = Vector2( 2, 2 )
-script = null
 
 [node name="zerograv" parent="." instance=ExtResource( 8 )]
 position = Vector2( 14199, -740.781 )

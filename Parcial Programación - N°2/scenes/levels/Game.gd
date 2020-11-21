@@ -2,7 +2,7 @@ extends Node2D
 var time_start = 0
 var time_now = 0
 export(String) var goal_target_scene = ""
-
+export(String) var goal2_target_scene = ""
 func _process(delta):
 	get_node("car/Camera2D/HUD2/VBoxContainer/monedas").text = "MONEDAS:\n" + str(Globals.monedas)
 	VisualServer.set_default_clear_color(Color(0.9,0.9,0.8))
@@ -25,4 +25,10 @@ func _on_goal_body_entered(body):
 		if err != OK:
 			print("Error al cambiar de Escena")
 			
+
+func _on_goal2_body_entered(body):
+	if body.get_name() == "car":
+		var err = get_tree().change_scene(goal2_target_scene)
+		if err != OK:
+			print("Error al cambiar de Escena")
 	pass # Replace with function body.
