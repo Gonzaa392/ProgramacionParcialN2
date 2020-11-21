@@ -61,13 +61,13 @@ margin_right = -99.6491
 margin_bottom = 380.348
 
 [node name="Car_Blue" type="Sprite" parent="."]
-position = Vector2( 208.211, 278.095 )
-scale = Vector2( 0.427824, 0.427824 )
+position = Vector2( 201.731, 280.464 )
+scale = Vector2( 0.400106, 0.400106 )
 texture = ExtResource( 7 )
 
 [node name="Car_Red " type="Sprite" parent="."]
-position = Vector2( 526.458, 268.016 )
-scale = Vector2( 0.988919, 0.988919 )
+position = Vector2( 527.633, 265.606 )
+scale = Vector2( 0.352882, 0.352882 )
 texture = ExtResource( 4 )
 
 [node name="Car_Yellow" type="Sprite" parent="."]

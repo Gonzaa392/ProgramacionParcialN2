@@ -24,7 +24,7 @@ func _process(delta):
 	Globals.current_time = str_elapsed
 	get_node("car/Camera2D/HUD2/VBoxContainer/tiempo").text = "TIEMPO:\n" + str(Globals.current_time)
 	
-	if Input.is_action_pressed("ui_restart"):
+	if Input.is_action_just_pressed("ui_restart"):
 		get_tree().reload_current_scene()
 
 func _on_goal_body_entered(body):
