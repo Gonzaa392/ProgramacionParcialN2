@@ -181,13 +181,10 @@ level_scene = "res://Scenes/levels/Level 2.tscn"
 
 [node name="Spikes2" parent="." instance=ExtResource( 15 )]
 position = Vector2( 14428.4, -523.072 )
-level_scene = "res://Scenes/levels/Level 2.tscn"
 
 [node name="Spikes3" parent="." instance=ExtResource( 15 )]
 position = Vector2( 14320.8, -501.548 )
-level_scene = "res://Scenes/levels/Level 2.tscn"
 
 [node name="Spikes" parent="." instance=ExtResource( 15 )]
 position = Vector2( 524.597, 92.0013 )
-level_scene = "res://Scenes/levels/Level 2.tscn"
 [connection signal="body_entered" from="goal" to="." method="_on_goal_body_entered"]

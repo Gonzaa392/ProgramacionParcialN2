@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/car/car.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/levels/Platforms/Platform.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Scenes/Buttons/Exit_Button.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/misc/Coin.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/platforms/goal.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/platforms/Checkpoint.tscn" type="PackedScene" id=15]
 
 [node name="Level 1" type="Node2D"]
 position = Vector2( -1142.69, -28.2843 )
@@ -164,4 +165,10 @@ position = Vector2( 17599.9, -26.1796 )
 [node name="goal" parent="." instance=ExtResource( 14 )]
 position = Vector2( 20557.9, 188.491 )
 scale = Vector2( 2, 2 )
+
+[node name="Checkpoint" parent="." instance=ExtResource( 15 )]
+position = Vector2( 789.705, -7.58319 )
+
+[node name="Checkpoint2" parent="." instance=ExtResource( 15 )]
+position = Vector2( 1586.87, -31.1283 )
 [connection signal="body_entered" from="goal" to="." method="_on_goal2_body_entered"]

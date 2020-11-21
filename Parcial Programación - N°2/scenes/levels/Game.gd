@@ -1,6 +1,7 @@
 extends Node2D
 var time_start = 0
 var time_now = 0
+
 export(String) var goal_target_scene = ""
 export(String) var goal2_target_scene = ""
 export(String) var goal3_target_scene = ""
@@ -19,6 +20,7 @@ func _process(delta):
 func _ready():
 		time_start = OS.get_unix_time()
 		set_process(true)
+		Globals.current_checkpoint = null
 
 func _on_goal_body_entered(body):
 	if body.get_name() == "car":
