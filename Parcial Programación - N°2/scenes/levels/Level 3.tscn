@@ -15,7 +15,7 @@
 [ext_resource path="res://Scenes/Buttons/Exit_Button.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/platforms/Checkpoint.tscn" type="PackedScene" id=14]
 
-[node name="Level 3" type="Node2D"]
+[node name="Main" type="Node2D"]
 position = Vector2( -4195.52, 275.896 )
 script = ExtResource( 10 )
 goal3_target_scene = "res://Scenes/Menu/LevelSelection.tscn"

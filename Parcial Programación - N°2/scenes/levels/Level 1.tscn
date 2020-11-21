@@ -16,7 +16,7 @@
 [ext_resource path="res://Scenes/platforms/goal.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/platforms/Checkpoint.tscn" type="PackedScene" id=15]
 
-[node name="Level 1" type="Node2D"]
+[node name="Main" type="Node2D"]
 position = Vector2( -1142.69, -28.2843 )
 script = ExtResource( 3 )
 goal2_target_scene = "res://Scenes/Menu/LevelSelection.tscn"

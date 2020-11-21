@@ -31,6 +31,7 @@ margin_left = 215.791
 margin_top = 73.3017
 margin_right = -212.529
 margin_bottom = -64.7786
+mouse_filter = 2
 custom_fonts/normal_font = SubResource( 2 )
 bbcode_enabled = true
 bbcode_text = "[center][shake]BUY"

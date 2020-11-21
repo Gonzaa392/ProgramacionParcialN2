@@ -6,7 +6,7 @@
 [ext_resource path="res://PNG/Car_Blue.png" type="Texture" id=4]
 [ext_resource path="res://Scenes/Menu/Store.gd" type="Script" id=5]
 [ext_resource path="res://PNG/Monedita.png" type="Texture" id=6]
-[ext_resource path="res://PNG/Car_Red .png" type="Texture" id=7]
+[ext_resource path="res://PNG/Car_Red.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/mini_pixel-7.ttf"
@@ -26,8 +26,8 @@ font_data = SubResource( 3 )
 script = ExtResource( 5 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -1.25989
-margin_right = 1027.74
+margin_left = 0.987547
+margin_right = 1029.99
 margin_bottom = 600.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
@@ -39,6 +39,7 @@ margin_left = 102.873
 margin_top = 318.13
 margin_right = 782.873
 margin_bottom = 598.13
+skin_number = 0
 
 [node name="TextureButton4" parent="." instance=ExtResource( 1 )]
 margin_left = 421.633
@@ -51,6 +52,7 @@ margin_left = 725.544
 margin_top = 316.87
 margin_right = 1405.54
 margin_bottom = 596.87
+skin_number = 2
 
 [node name="Control" parent="." instance=ExtResource( 2 )]
 margin_left = -99.6491
@@ -59,17 +61,19 @@ margin_right = -99.6491
 margin_bottom = 380.348
 
 [node name="Car_Blue" type="Sprite" parent="."]
-position = Vector2( 206.333, 262.629 )
+position = Vector2( 208.211, 278.095 )
+scale = Vector2( 0.427824, 0.427824 )
+texture = ExtResource( 7 )
+
+[node name="Car_Red " type="Sprite" parent="."]
+position = Vector2( 526.458, 268.016 )
+scale = Vector2( 0.988919, 0.988919 )
 texture = ExtResource( 4 )
 
 [node name="Car_Yellow" type="Sprite" parent="."]
 position = Vector2( 828.671, 280.182 )
 scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
-
-[node name="Car_Red " type="Sprite" parent="Car_Yellow"]
-position = Vector2( -759.892, -29.4555 )
-texture = ExtResource( 7 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchor_left = 0.5
