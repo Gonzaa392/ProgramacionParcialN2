@@ -7,7 +7,7 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "Intro Animación"
-length = 8.0
+length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("Car_Red:position")
 tracks/0/interp = 1
@@ -76,7 +76,8 @@ scale = Vector2( 0.177857, 0.177857 )
 texture = ExtResource( 3 )
 
 [node name="Car_Red" type="Sprite" parent="."]
-position = Vector2( -56.4261, 290.809 )
+position = Vector2( 1082.45, 299.718 )
+rotation = 6.28319
 scale = Vector2( 0.177857, 0.177857 )
 texture = ExtResource( 2 )
 
