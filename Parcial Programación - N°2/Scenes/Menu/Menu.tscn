@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://scenes/Menu/Creditos.gd" type="Script" id=1]
 [ext_resource path="res://PNG/Button_Template.png" type="Texture" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/Menu/Salir.gd" type="Script" id=4]
 [ext_resource path="res://PNG/Racetrack_titulo.png" type="Texture" id=5]
 [ext_resource path="res://PNG/Logo de la empresa invertido.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Menu/Shop.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://fonts/mini_pixel-7.ttf"
@@ -83,9 +84,9 @@ text = "CREDITOS"
 
 [node name="Salir" type="TextureButton" parent="."]
 margin_left = -100.0
-margin_top = 100.0
+margin_top = 200.794
 margin_right = 580.0
-margin_bottom = 380.0
+margin_bottom = 480.794
 rect_scale = Vector2( 0.3, 0.3 )
 texture_normal = ExtResource( 2 )
 script = ExtResource( 4 )
@@ -104,6 +105,33 @@ custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
 bbcode_text = "[center][shake]SALIR"
 text = "SALIR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shop" type="TextureButton" parent="."]
+margin_left = -100.0
+margin_top = 105.04
+margin_right = 580.0
+margin_bottom = 385.04
+rect_scale = Vector2( 0.3, 0.3 )
+texture_normal = ExtResource( 2 )
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Shop"]
+margin_left = 84.2788
+margin_top = 90.4455
+margin_right = 184.279
+margin_bottom = 112.445
+rect_scale = Vector2( 5, 5 )
+mouse_filter = 2
+custom_fonts/normal_font = SubResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center][shake]SHOP"
+text = "SHOP"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -131,3 +159,4 @@ texture = ExtResource( 6 )
 [connection signal="pressed" from="Jugar" to="Jugar" method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="Creditos" to="Creditos" method="_on_Creditos_pressed"]
 [connection signal="pressed" from="Salir" to="Salir" method="_on_Salir_pressed"]
+[connection signal="pressed" from="Shop" to="Shop" method="_on_Shop_pressed"]
