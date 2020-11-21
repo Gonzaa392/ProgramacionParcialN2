@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/car/car.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/levels/Platforms/Platform.tscn" type="PackedScene" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://Scenes/misc/Death.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/levels/Spikes.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/platforms/bounce.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Buttons/Exit_Button.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/misc/Coin.tscn" type="PackedScene" id=13]
 
 [node name="Level 1" type="Node2D"]
 script = ExtResource( 3 )
@@ -22,6 +24,8 @@ SPEED = 60
 [node name="Camera2D" parent="car" instance=ExtResource( 5 )]
 
 [node name="HUD2" parent="car/Camera2D" instance=ExtResource( 4 )]
+
+[node name="Exit_Button" parent="car/Camera2D/HUD2" instance=ExtResource( 12 )]
 
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 564.645, 211.287 )
@@ -148,3 +152,12 @@ position = Vector2( 18832.7, -259.572 )
 
 [node name="Node2D10" parent="." instance=ExtResource( 2 )]
 position = Vector2( 19979.5, 304.063 )
+
+[node name="Coin" parent="." instance=ExtResource( 13 )]
+position = Vector2( 11089, 318.994 )
+
+[node name="Coin2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 13458.7, 1.83594 )
+
+[node name="Coin" parent="Coin2" instance=ExtResource( 13 )]
+position = Vector2( 4141.26, -28.0155 )
