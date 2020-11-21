@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scenes/levels/Platforms/Platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/levels/Platforms/Seesaw.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Scenes/misc/Death.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/levels/Spikes.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Scenes/Buttons/Exit_Button.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Scenes/platforms/Checkpoint.tscn" type="PackedScene" id=17]
 
 [node name="Level 2" type="Node2D"]
 position = Vector2( -6150.94, -256.289 )
@@ -23,13 +24,13 @@ script = ExtResource( 10 )
 goal_target_scene = "res://Scenes/Menu/LevelSelection.tscn"
 
 [node name="Seesaw" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1721.54, 157.714 )
+position = Vector2( 1721.54, 181.714 )
 
 [node name="Seesaw2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 2604.83, 161.042 )
+position = Vector2( 2608.83, 197.042 )
 
 [node name="Seesaw3" parent="." instance=ExtResource( 2 )]
-position = Vector2( 3467.73, 209.3 )
+position = Vector2( 3499.73, 217.3 )
 
 [node name="Platform" parent="." instance=ExtResource( 1 )]
 position = Vector2( 7489.15, 278.437 )
@@ -136,8 +137,11 @@ position = Vector2( 4961.13, -268.017 )
 scale = Vector2( 0.8, 0.8 )
 
 [node name="Coin4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 532.526, -75.3658 )
+position = Vector2( 736.526, -39.3658 )
 scale = Vector2( 0.8, 0.8 )
+
+[node name="Coin" parent="Coin4" instance=ExtResource( 6 )]
+position = Vector2( 6954.09, 101.005 )
 
 [node name="magnet2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 7179.27, 376.957 )
@@ -169,7 +173,7 @@ scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 12 )
 
 [node name="flecha_neon_azul2" type="Sprite" parent="."]
-position = Vector2( 4360.34, 125.453 )
+position = Vector2( 4264.34, 149.453 )
 rotation = -1.5708
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 12 )
@@ -187,4 +191,10 @@ position = Vector2( 14320.8, -501.548 )
 
 [node name="Spikes" parent="." instance=ExtResource( 15 )]
 position = Vector2( 524.597, 92.0013 )
+
+[node name="Checkpoint" parent="." instance=ExtResource( 17 )]
+position = Vector2( 935.939, 85.5917 )
+
+[node name="Checkpoint2" parent="." instance=ExtResource( 17 )]
+position = Vector2( 7180.61, 191.307 )
 [connection signal="body_entered" from="goal" to="." method="_on_goal_body_entered"]
