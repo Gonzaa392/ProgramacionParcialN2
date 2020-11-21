@@ -22,6 +22,10 @@ func _ready():
 			archivo.close()
 			current_skin = data
 
+func _process(delta):
+	if Input.is_action_just_pressed("ui_fullscreen"):
+		OS.window_fullscreen = !OS.window_fullscreen
+
 func start_level():
 	if get_node_or_null("/root/Main/car/Sprite") != null: #check por seguridad
 		print("me detecta el sprite")
