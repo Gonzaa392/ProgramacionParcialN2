@@ -197,4 +197,8 @@ position = Vector2( 935.939, 85.5917 )
 
 [node name="Checkpoint2" parent="." instance=ExtResource( 17 )]
 position = Vector2( 7180.61, 191.307 )
+
+[node name="Node2D4" parent="." instance=ExtResource( 1 )]
+position = Vector2( -212.566, -478.358 )
+rotation = 1.5708
 [connection signal="body_entered" from="goal" to="." method="_on_goal_body_entered"]
