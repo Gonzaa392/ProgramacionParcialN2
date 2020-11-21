@@ -6,7 +6,8 @@ var best_time = 0
 var current_time = 0
 var current_checkpoint = null
 
-var sprites = [preload("res://PNG/Car_Blue.png"),preload("res://PNG/Car_Red.png"),preload("res://PNG/Car_Yellow.png")]
+var skin_unlocked = [true,false,false]
+var sprites = [preload("res://PNG/Car_Red.png"),preload("res://PNG/Car_Blue.png"),preload("res://PNG/Car_Yellow.png")]
 var current_skin = 1
 
 var save_path = "user://save.dat"
