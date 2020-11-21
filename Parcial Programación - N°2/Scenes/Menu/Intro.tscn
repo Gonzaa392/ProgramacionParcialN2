@@ -38,10 +38,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 2 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 2, 3.8, 4.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
 
 [sub_resource type="AudioStreamOGGVorbis" id=3]
@@ -67,14 +67,14 @@ scale = Vector2( 0.715567, 0.245285 )
 texture = ExtResource( 4 )
 
 [node name="Logo de la empresa invertido" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
 light_mask = 0
 position = Vector2( 496.572, 265.207 )
 scale = Vector2( 0.177857, 0.177857 )
 texture = ExtResource( 3 )
 
 [node name="Car_Red" type="Sprite" parent="."]
-position = Vector2( 1082.45, 299.718 )
-rotation = 6.28319
+position = Vector2( -56.4261, 290.809 )
 scale = Vector2( 0.177857, 0.177857 )
 texture = ExtResource( 2 )
 
