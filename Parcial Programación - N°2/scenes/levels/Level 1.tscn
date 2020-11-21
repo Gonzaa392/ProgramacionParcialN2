@@ -95,19 +95,15 @@ position = Vector2( 12334.8, 441.037 )
 
 [node name="Spikes" parent="." instance=ExtResource( 10 )]
 position = Vector2( 7417.15, 323.071 )
-level_scene = "res://Scenes/levels/Level 1.tscn"
 
 [node name="Spikes2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 7594.94, 326.246 )
-level_scene = "res://Scenes/levels/Level 1.tscn"
 
 [node name="Spikes3" parent="." instance=ExtResource( 10 )]
 position = Vector2( 7766.38, 326.246 )
-level_scene = "res://Scenes/levels/Level 1.tscn"
 
 [node name="Spikes4" parent="." instance=ExtResource( 10 )]
 position = Vector2( 2826.07, 206.457 )
-level_scene = "res://Scenes/levels/Level 1.tscn"
 
 [node name="Death" parent="." instance=ExtResource( 9 )]
 position = Vector2( 2258.57, 1367.16 )
