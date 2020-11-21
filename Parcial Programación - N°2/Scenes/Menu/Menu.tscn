@@ -137,8 +137,8 @@ rect_scale = Vector2( 5, 5 )
 mouse_filter = 2
 custom_fonts/normal_font = SubResource( 4 )
 bbcode_enabled = true
-bbcode_text = "[center][shake]SHOP"
-text = "SHOP"
+bbcode_text = "[center][shake]SKINS"
+text = "SKINS"
 __meta__ = {
 "_edit_use_anchors_": false
 }
