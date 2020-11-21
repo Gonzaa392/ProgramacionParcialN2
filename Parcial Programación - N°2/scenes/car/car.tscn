@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/car/car.gd" type="Script" id=1]
-[ext_resource path="res://PNG/Car_Red .png" type="Texture" id=2]
+[ext_resource path="res://PNG/Car_Red.png" type="Texture" id=2]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 0.0
@@ -29,7 +29,7 @@ position = Vector2( 3.57481, -0.293911 )
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1.13345, 16.91 )
+position = Vector2( 2.13345, 31.91 )
 scale = Vector2( 0.373241, 0.373241 )
 texture = ExtResource( 2 )
 
